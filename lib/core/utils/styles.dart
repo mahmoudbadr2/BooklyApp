@@ -9,6 +9,7 @@ abstract class Styles {
   static const textStyle30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.w600,
+    fontFamily: 'Spectral',
   );
 
   static const textStyle20 = TextStyle(
