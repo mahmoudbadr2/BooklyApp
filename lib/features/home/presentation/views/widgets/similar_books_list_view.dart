@@ -14,7 +14,10 @@ class SimilarBoxListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
-            child: const CustomBookImage(),
+            child: const CustomBookImage(
+              imageUrl:
+                  'https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-portrait-of-woman-with-hair-over-her-face-free-image.jpeg?w=2210&quality=70',
+            ),
           );
         },
       ),

@@ -14,7 +14,10 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-          child: CustomBookImage(),
+          child: CustomBookImage(
+            imageUrl:
+                'https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-portrait-of-woman-with-hair-over-her-face-free-image.jpeg?w=2210&quality=70',
+          ),
         ),
         const SizedBox(height: 23),
         Text('The Jungle Book ', style: Styles.textStyle30),
