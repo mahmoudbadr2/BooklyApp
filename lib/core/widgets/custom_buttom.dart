@@ -9,6 +9,7 @@ class CustomButtom extends StatelessWidget {
     this.borderRadius,
     required this.text,
     this.fontSize,
+    this.onPressed,
   });
 
   final Color backgroundColor;
@@ -16,12 +17,13 @@ class CustomButtom extends StatelessWidget {
   final BorderRadius? borderRadius;
   final String text;
   final double? fontSize;
+  final VoidCallback? onPressed;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 48,
       child: TextButton(
-        onPressed: () {},
+        onPressed: onPressed,
         style: TextButton.styleFrom(
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(

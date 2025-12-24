@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/features/home/presentation/manager/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
@@ -15,13 +16,14 @@ class SimilarBoxListView extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.15,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                  child: const CustomBookImage(
+                  child: CustomBookImage(
                     imageUrl:
-                        'https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-portrait-of-woman-with-hair-over-her-face-free-image.jpeg?w=2210&quality=70',
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                        AssetsData.googleLogo,
                   ),
                 );
               },
